@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class Employees {
     public void printEmployeeData() {
         try {
-            Scanner file = new Scanner(new File("exercise42_input.txt"));
+            Scanner file = new Scanner(new File("data/exercise42_input.txt"));
             //print tab header "Last First Salary\n-------------------"
             System.out.printf("%-10s%-10s%-10s\n", "Last", "First", "Salary");
             System.out.println("--------------------------");
