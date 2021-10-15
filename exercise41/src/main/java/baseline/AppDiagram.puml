@@ -1,0 +1,15 @@
+@startuml
+
+class Solution41 {
++main()
+}
+
+class NameSorter {
+-arrayList<String> names
+
++readNames()
++outputNames()
+}
+
+Solution41 "uses" --> NameSorter
+@enduml

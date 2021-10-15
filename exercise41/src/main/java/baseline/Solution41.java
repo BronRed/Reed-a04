@@ -3,10 +3,17 @@
  *  Copyright 2021 Brian Reed
  */
 package baseline;
+import java.io.FileNotFoundException;
 
 public class Solution41 {
-    //read data in input.txt until no more lines
-    //store names in arraylist
-    //sort names alphabetically
-    //output names using filewriter
+    public static void main(String[] args) throws FileNotFoundException {
+        NameSorter ns = new NameSorter();
+        ns.readNames();
+        try {
+            ns.outputNames();
+        }
+        catch (Exception e) {
+            System.out.println("\nOutput file not found.\n");
+        }
+    }
 }
