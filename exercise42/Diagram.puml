@@ -1,0 +1,11 @@
+@startuml
+class Solution42{
++main()
+}
+
+class Employees{
++printEmployeeData()
+}
+
+Solution42 "uses" --> Employees
+@enduml

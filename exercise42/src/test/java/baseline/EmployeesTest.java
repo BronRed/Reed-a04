@@ -4,9 +4,11 @@
  */
 package baseline;
 
-public class Solution42 {
-    public static void main(String[] args){
-        //create employee object with last first and salary
+import org.junit.jupiter.api.Test;
+
+class EmployeesTest {
+    @Test
+    void printEmployeeDataTest(){
         Employees emp = new Employees();
         emp.printEmployeeData();
     }
