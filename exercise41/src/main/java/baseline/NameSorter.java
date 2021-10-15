@@ -18,7 +18,7 @@ public class NameSorter {
     //throw exception if input file not found
     public void readNames() throws FileNotFoundException {
         //read data in input.txt until no more lines
-        Scanner inputFile = new Scanner(new File("exercise41_input.txt"));
+        Scanner inputFile = new Scanner(new File("data/exercise41_input.txt"));
         //while there's more lines in input file, keep reading
         while (inputFile.hasNextLine()) {
             names.add(inputFile.nextLine());
@@ -32,7 +32,7 @@ public class NameSorter {
     //output names using fileWriter
     //make exception if file wasn't found or created
     public void outputNames() throws IOException {
-        FileWriter output = new FileWriter("exercise41_output.txt");
+        FileWriter output = new FileWriter("data/exercise41_output.txt");
         //write number of names
         output.write("Total of " + names.size() + " names\n");
         output.write("--------------------\n");
