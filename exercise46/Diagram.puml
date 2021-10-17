@@ -1,0 +1,12 @@
+@startuml
+class Solution46{
+}
+
+class WordCounter{
++HashMap<String, Integer> map
++readFile()
++printMap()
+}
+
+Solution46 --o WordCounter
+@enduml

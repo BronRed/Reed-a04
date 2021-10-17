@@ -4,11 +4,12 @@
  */
 package baseline;
 
+import java.io.FileNotFoundException;
+
 public class Solution46 {
-    public static void main(String[] args){
-        //hashmap with word and # times it was used
-        //read through file and add words to hashmap
-        //count number of times a word has been used in hashmap
-        //print out hashmap
+    public static void main(String[] args) throws FileNotFoundException {
+        WordCounter wc = new WordCounter();
+        wc.readFile();
+        wc.printMap();
     }
 }
