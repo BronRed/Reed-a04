@@ -1,0 +1,12 @@
+@startuml
+class Solution45{
+}
+
+class ModifyText{
++path
++readAndReplace()
++createFile()
+}
+
+Solution45 --o ModifyText
+@enduml
