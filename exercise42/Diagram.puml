@@ -7,5 +7,5 @@ class Employees{
 +printEmployeeData()
 }
 
-Solution42 "uses" --> Employees
+Solution42 --o Employees
 @enduml

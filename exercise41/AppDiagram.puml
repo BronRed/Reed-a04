@@ -15,5 +15,5 @@ class NameSorter {
 +outputNames()
 }
 
-Solution41 "uses" --> NameSorter
+Solution41 --o NameSorter
 @enduml
