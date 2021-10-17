@@ -6,6 +6,7 @@ package baseline;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
+import java.util.Map.Entry;
 
 public class WordCounter {
     //hashmap with word and # times it was used
@@ -34,7 +35,37 @@ public class WordCounter {
     }
 
     public void printMap(){
-        //print out hashmap
-        System.out.print(map);
+        int k=0;
+        String[] keys = new String[map.size()];
+        Integer[] values = new Integer[map.size()];
+        Integer[] tempValues = new Integer[map.size()];
+        String[] tempKeys = new String[map.size()];
+        //make arrays for keys and values of map
+        for (Entry<String, Integer> entry : map.entrySet()){
+            keys[k] = entry.getKey();
+            values[k++] = entry.getValue();
+        }
+        //copy array values and reverse sort
+        System.arraycopy(values, 0, tempValues, 0, values.length);
+        Arrays.sort(values, Collections.reverseOrder());
+        //make sure keys and values arrays are matched still
+        for(int i=0; i<map.size();i++){
+            int value = values[i];
+            for(int j=0; j<tempValues.length;j++){
+                if(value == tempValues[j]){
+                    tempKeys[i] = keys[j];
+                    break;
+                }
+            }
+        }
+        //print the histogram
+        for(int i=0;i<map.size();i++){
+            int value = map.get(tempKeys[i]);
+            System.out.printf("%-10s ", tempKeys[i]+":");
+            for(int j=0; j<value; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 }
